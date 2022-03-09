@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <title>Inicio - Lojas S.A.</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container d-flex">
+            <div>
+                <a class="navbar-brand" href="/">Lojas S.A.</a>
+            </div>
+
+            <div>
+                <a class="navbar-brand" href="/produtos">Consulta Estoque</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="mt-5 container">
+        <div class="w-100">
+            <h1 class="text-center mb-5">Adicionar ao Estoque</h1>
+        </div>
+
+        <form action="/produtos/cadastrar" method="post">
+            <div class="form-group col-6 ml-auto mr-auto">
+                <input name="nome" type="text" class="form-control" placeholder="Informe o Nome da Roupa">
+            </div>
+
+            <div class="form-group col-6 ml-auto mr-auto">
+                <input name="marca" type="text" class="form-control" placeholder="Informe a Marca da Roupa">
+            </div>
+
+            <div class="form-group col-6 ml-auto mr-auto">
+                <input name="valor" type="number" class="form-control" placeholder="Informe o Valor da Roupa">
+            </div>
+
+            <div class="form-group col-6 ml-auto mr-auto">
+                <input name="quantidade" type="number" class="form-control" placeholder="Informe a Quantidade de Peças">
+            </div>
+
+            <div class="form-group col-6 ml-auto mr-auto">
+                <input name="descricao" type="text" class="form-control" placeholder="Informe a Descrição da Roupa">
+
+                <button type="submit" class="btn btn-primary mt-3">Adicionar</button>
+            </div>
+
+        </form>
+    </section>
+
+</body>
+
+</html>

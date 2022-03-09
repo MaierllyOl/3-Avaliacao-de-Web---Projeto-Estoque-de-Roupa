@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <title>Edição de Produtos</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container d-flex">
+            <div>
+                <a class="navbar-brand" href="/">Lojas S.A.</a>
+            </div>
+
+            <div>
+                <a class="navbar-brand" href="/produtos">Voltar</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="mt-5 container">
+        <div class="w-100">
+            <h1 class="text-center mb-5">Editar</h1>
+        </div>
+
+        <form th:object="${cadastro}" action="/produtos/editar" method="post">
+
+            <input type="hidden" th:field="*{id}">
+
+            <div class="form-group col-6 ml-auto mr-auto">
+                <input th:field="*{nome}" type="text" class="form-control" placeholder="Informe o Nome do Produto">
+            </div>
+
+            <div class="form-group col-6 ml-auto mr-auto">
+                <input th:field="*{marca}" type="text" class="form-control" placeholder="Informe a Marca do Produto">
+            </div>
+
+            <div class="form-group col-6 ml-auto mr-auto">
+                <input th:field="*{valor}" type="number" class="form-control" placeholder="Informe o Valor do Produto">
+            </div>
+
+            <div class="form-group col-6 ml-auto mr-auto">
+                <input th:field="*{quantidade}" type="number" class="form-control"
+                    placeholder="Informe a Quantidade do Produto">
+            </div>
+
+            <div class="form-group col-6 ml-auto mr-auto">
+
+                <input th:field="*{descricao}" type="text" class="form-control"
+                    placeholder="Informe a Descrição do Produto">
+
+                <button type="submit" class="btn btn-primary mt-3">SALVAR</button>
+            </div>
+
+        </form>
+    </section>
+
+</body>
+
+</html>
